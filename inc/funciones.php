@@ -35,4 +35,15 @@ function delete($book_id, $book){
     return $salida;
 }
 
+function buy($book_id, $book){
+	$salida = "";
+	$salida = $salida.'<div class="col-md-3" style="margin-bottom:30px">';
+	$salida = $salida.'<h4 style="height:30px;">'.$book["name"].'</h4> <strong>'.$book["precio"].' €</strong>';
+	$salida = $salida.'<a href="'.$book["imagen"].'" target="_blank"><img class="img-rounded" style="width:90%;height:350px; margin-bottom:5px;" src="'.$book["imagen"].'"></a>';
+    $salida = $salida.'<p><a class="btn btn-danger"  style="margin-right:15px;" href="../buyItem.php?id=' .$book_id.'" role="button">Comprar &raquo;</a><small>'.$book["stock"].' en stock.</small></p>
+        			  </div>';  
+
+    return $salida;
+}
+
 ?>

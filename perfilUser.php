@@ -1,4 +1,9 @@
-<?php  ?>
+<?php 
+	include('inc/users.php');
+	$id=$_GET['id'];
+	$user=$users[$id];
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,12 +20,10 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="perfilAdmin.php">Administración</a>
+      <a class="navbar-brand" href=<?php echo "perfilUser.php?id=".$id?>> Tiendanube  </a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="inc/admin/addProduct.php">Añadir Producto</a></li>
-      <li><a href="inc/admin/deleteProduct.php">Eliminar Producto</a></li>
-      <li><a href="#">Modificar Producto</a></li>
+      <li><a href=<?php echo "inc/user/buy.php?id=".$id ?>>Comprar</a></li>
       <li><a href="#">Facturas</a></li>
       <li ><a style="color:white" href="index.php" class="btn btn-danger" type="button">Cerrar Sesión</a></li>
     </ul>
@@ -28,7 +31,7 @@
 </nav>
 <div class="jumbotron">
   <div class="container">
-    <h1>Bienvenido al Panel de Administración</h1>
+    <h1>Bienvenido al Perfil de Usuario </h1>
     <p>Tu tienda online de confianza donde conseguir los mejores descuentos en libros electronicos e E-books.</p>
   </div>
 </div>
